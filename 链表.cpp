@@ -41,3 +41,12 @@ void list(Node* pl){//遍历链表
     for(Node* p = pl;p!=NULL;p=p->next){cout << p->data << " "; }
     cout << endl;
 }
+
+void apptail(Node*pl , eType e){//尾插法加节点
+    Node*pnew = new Node;
+    pnew->data = e;
+    pnew->next = NULL;
+    Node* p = pl;
+    for(;p->next!=NULL;p=p->next);
+    p->next = pnew;
+}
