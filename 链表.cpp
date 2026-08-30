@@ -33,8 +33,10 @@ Node* initLink(){//链表初始化函数
 
 void apphead(Node* pl, eType e){//头插法加节点
     Node* pnew = new Node;    //创建新结点
+
     pnew->data = e;           //数据域赋值
     pnew->next = pl->next;    //新结点指针域指向原头结点的下一个结点
+    
     pl->next = pnew;          //头结点指针域指向新结点（不能颠倒）
 }
 void list(Node* pl){//遍历链表
@@ -44,8 +46,10 @@ void list(Node* pl){//遍历链表
 
 void apptail(Node*pl , eType e){//尾插法加节点
     Node*pnew = new Node;
+
     pnew->data = e;
     pnew->next = NULL;
+    
     Node* p = pl;
     for(;p->next!=NULL;p=p->next);
     p->next = pnew;
